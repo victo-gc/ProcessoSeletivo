@@ -15,9 +15,14 @@ jobs:
     - uses: actions/checkout@v3
     
     - name: Start MySQL
-  # You may pin to the exact commit or the version.
-  # uses: samin/mysql-action@4dd1210f1d6b9c2468adec44066ef4a97b8f07f3
+      with:
+        mysql database: bibiloteca # optional, default is 
+          # MYSQL_USER - create the specified user with superuser power for created database
+        mysql user: root # optional, default is 
+          # MYSQL_PASSWORD - specified superuser password which user is power for created database
+
       uses: samin/mysql-action@v1.3
+      
     - name: Build the site in the jekyll/builder container
       run: |
         docker run \

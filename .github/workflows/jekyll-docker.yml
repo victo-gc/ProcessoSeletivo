@@ -13,15 +13,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    
-    - name: Start MySQL
-      uses: samin/mysql-action@v1.3
-      with:
-          mysql database: bibiloteca # optional, default is 
-              # MYSQL_USER - create the specified user with superuser power for created database
-          mysql user: root # optional, default is 
-              # MYSQL_PASSWORD - specified superuser password which user is power for created database
-
+  
 
     - name: Build the site in the jekyll/builder container
       run: |
